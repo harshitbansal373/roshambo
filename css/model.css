@@ -28,7 +28,7 @@
 
 @media(max-width: 700px) {
     .model-content{
-        margin-top: 22%;
+        margin-top: 25%;
         width: 330px;
     }
     .model-content img {
@@ -38,7 +38,7 @@
 
 @media(max-width: 500px) {
     .model-content{
-        margin-top: 35%;
+        margin-top: 41%;
         width: 305px;
     }
     .model-content img {
