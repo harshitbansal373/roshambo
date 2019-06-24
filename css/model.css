@@ -22,6 +22,30 @@
     animation-duration: 1s;
 }
 
+.model-content img {
+    width: 185px;
+}
+
+@media(max-width: 700px) {
+    .model-content{
+        margin-top: 22%;
+        width: 330px;
+    }
+    .model-content img {
+        width: 150px;
+    }
+}
+
+@media(max-width: 500px) {
+    .model-content{
+        margin-top: 35%;
+        width: 305px;
+    }
+    .model-content img {
+        width: 119px;
+    }
+}
+
 .model-content h4{
     margin-bottom: 15px;
 }
