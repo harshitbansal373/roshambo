@@ -50,3 +50,11 @@ body{
     border-radius: 50%;
     padding: 7%;
 }
+
+.text-win{
+    color: #28a745;
+}
+
+.text-lose{
+    color: #dc3545;
+}
