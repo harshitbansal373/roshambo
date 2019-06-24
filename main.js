@@ -5,7 +5,7 @@ const restart = document.getElementById('restart');
 const model = document.querySelector('.model');
 const scoreboard = {
     player: 0,
-    computer: 0
+    computer: 0,
 }
 
 //play game
@@ -67,7 +67,7 @@ function showWinner(winner, computerChoice){
         result.innerHTML= `
             <h4 class="text-win">You Win</h4>
             <img class="img-fluid" src="images/${computerChoice}.png" alt="">
-            <p>Computer chose <strong>${computerChoice}</strong></p>
+            <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
         `;
     }else if(winner === 'computer'){
         //Inc computer score
@@ -76,14 +76,14 @@ function showWinner(winner, computerChoice){
         result.innerHTML= `
             <h4 class="text-lose">You Lose</h4>
             <img class="img-fluid" src="images/${computerChoice}.png" alt="">
-            <p>Computer chose <strong>${computerChoice}</strong></p>
+            <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
         `;
     }else{
         //show model result
         result.innerHTML= `
             <h4>It's a Draw</h4>
             <img class="img-fluid" src="images/${computerChoice}.png" alt="">
-            <p>Computer chose <strong>${computerChoice}</strong></p>
+            <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
         `;
     }
 
@@ -97,5 +97,24 @@ function showWinner(winner, computerChoice){
 
 }
 
+//restart game
+function restartGame(){
+    scoreboard.player=0;
+    scoreboard.computer=0;
+    score.innerHTML=`
+        <div class="col-6">Player: 0</div>
+        <div class="col-6">computer: 0</div>
+    `;
+}
+
+//clear model
+function clearmodel(e){
+    if (e.target == model){
+        model.style.display='none';
+    }    
+}
+
 //Event listener
 choices.forEach(choice => choice.addEventListener('click',play));
+window.addEventListener('click',clearmodel);
+restart.addEventListener('click',restartGame);
