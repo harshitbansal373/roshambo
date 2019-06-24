@@ -13,25 +13,35 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
     <!-- Css style -->
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="container text-center">
         <header class="header">
-            <h1>Rock Paper Scissors</h1>
-            <button id="restart" class="restart btn">Restart Game</button>
-            <div id="score" class="score">
-                <p>Player: 0</p>
-                <p>Computer: 0</p>
+            <h2 class="mb-3">Rock Paper Scissors</h2>
+            <button class="restart-btn" id="restart">Restart Game</button>
+            <div id="score" class="row score">
+                <div class="col-6">
+                    Player: 0
+                </div>
+                <div class="col-6">
+                    Computer: 0
+                </div>
             </div>
         </header>
-        <h2>Make Your Selection</h2>
-        <div class="choices">
-            <img src="images/rock.png" alt="">
-            <img src="images/paper.png" alt="">
-            <img src="images/scissor.png" alt="">
+        <h3 class="mb-4">Make Your Selection</h3>
+        <div class="row">
+            <div class="col-4">
+                <img class="img-fluid choice" src="images/rock.png" alt="">
+            </div>
+            <div class="col-4">
+                <img class="img-fluid choice" src="images/paper.png" alt="">
+            </div>
+            <div class="col-4">
+                <img class="img-fluid choice" src="images/scissor.png" alt="">
+            </div>
         </div>
-        
+
     </div>
     
 </body>
