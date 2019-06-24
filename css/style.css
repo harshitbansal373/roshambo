@@ -16,7 +16,7 @@ header h2{
 }
 
 .restart-btn{
-    display: inline-block;
+    display: none;
     background-color: lightblue;
     color: black;
     padding: 5px 7px;
