@@ -11,6 +11,10 @@ body{
     line-height: 1.6;
 }
 
+header h2{
+    margin-top: 2%;
+}
+
 .restart-btn{
     display: inline-block;
     background-color: lightblue;
