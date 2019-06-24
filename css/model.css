@@ -22,6 +22,10 @@
     animation-duration: 1s;
 }
 
+.model-content h4{
+    margin-bottom: 15px;
+}
+
 .model-content p{
     font-size: 18px;
     margin-top: 1rem;

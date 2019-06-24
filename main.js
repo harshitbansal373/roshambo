@@ -14,7 +14,7 @@ function play(e){
     const playerChoice = e.target.id;
     const computerChoice = getComputerChoice();
     const winner = getWinner(playerChoice, computerChoice);
-    console.log(playerChoice, computerChoice, winner);
+    showWinner(winner, computerChoice);
 }
 
 //get computer choice
@@ -57,6 +57,44 @@ function getWinner(p, c){
             return 'player';
         }
     }
+}
+
+function showWinner(winner, computerChoice){
+    if(winner === 'player'){
+        //Inc player score
+        scoreboard.player++;
+        //show model result
+        result.innerHTML= `
+            <h4 class="text-win">You Win</h4>
+            <img class="img-fluid" src="images/${computerChoice}.png" alt="">
+            <p>Computer chose <strong>${computerChoice}</strong></p>
+        `;
+    }else if(winner === 'computer'){
+        //Inc computer score
+        scoreboard.computer++;
+        //show model result
+        result.innerHTML= `
+            <h4 class="text-lose">You Lose</h4>
+            <img class="img-fluid" src="images/${computerChoice}.png" alt="">
+            <p>Computer chose <strong>${computerChoice}</strong></p>
+        `;
+    }else{
+        //show model result
+        result.innerHTML= `
+            <h4>It's a Draw</h4>
+            <img class="img-fluid" src="images/${computerChoice}.png" alt="">
+            <p>Computer chose <strong>${computerChoice}</strong></p>
+        `;
+    }
+
+    //show score
+    score.innerHTML=`
+        <div class="col-6">Player: ${scoreboard.player}</div>
+        <div class="col-6">computer: ${scoreboard.computer}</div>
+    `;
+
+    model.style.display='block';
+
 }
 
 //Event listener
