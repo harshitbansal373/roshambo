@@ -1,4 +1,8 @@
 # Roshambo
+![repo-size](https://img.shields.io/github/repo-size/harshitbansal373/roshambo?style=flat-square)
+
+<br>
+
 This is online game of Rock-Paper-scissors. This is based on javascript and bootstrap. In This You can play with Computer.
 
 # Some Preview
